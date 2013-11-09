@@ -1,0 +1,75 @@
+﻿* **Data:** 07/11/2013
+* **Horário:** 21:15
+* **Linguagem:** C#
+* **Problema:** O problema proposto foi o [Nuvem de Cinzas](http://dojopuzzles.com/problemas/exibe/nuvem-de-cinzas/):
+
+Um vulcão acaba de entrar em erupção, provocando uma nuvem de cinzas que se alastra impedindo a circulação aérea. O governo está muito preocupado e deseja saber quando que a nuvem de cinzas irá atingir todos os aeroportos do país.
+
+Está disponível um mapa detalhando a situação atual. O mapa é retangular, dividido em pequenos quadrados. Neste mapa existem três tipos de quadrados: nuvem (indicando que esta região do mapa já está coberto por nuvens), aeroportos (indicando a localização de um aeroporto) e todas as outras (indicando locais onde a nuvem ainda não chegou).
+
+A cada dia, a nuvem expande-se um quadrado na horizontal e um quadrado na vertical. Ou seja, ao fim de cada dia, todos os quadrados adjacentes (vertical ou horizontalmente) a uma nuvem, também passam a conter nuvens. Por exemplo:
+
+<pre>
+. . * . . . * *      . * * * . * * *     * * * * * * * *
+. * * . . . . .      * * * * . . * *     * * * * * * * *
+* * * . A . . A      * * * * A . . A     * * * * * . * *
+. * . . . . . .  ->  * * * . . . . .  -> * * * * . . . .
+. * . . . . A .      * * * . . . A .     * * * * . . A .
+. . . A . . . .      . * . A . . . .     * * * A . . . .
+. . . . . . . .      . . . . . . . .     . * . . . . . .
+     Dia 1                Dia 2               Dia 3
+</pre>
+
+Para preparar os planos de contingência, o governo necessita saber: quantos dias demorará para ao menos um aeroporto ficar coberto pelas nuvens e daqui quantos dias todos os aeroportos estarão cobertos pelas nuvens.
+
+Dados um quadriculado com L linhas e C colunas, além da indicação inicial das nuvens e dos aeroportos, desenvolva uma programa que informe o número de dias até um primeiro aeroporto ficar debaixo da nuvem de cinzas e o número de dias até que todos os aeroportos ficarem cobertos pelas cinzas.
+
+* **Formato:** Randori
+* **Participantes**: *Alexandre José da Conceição*, André Luis de Souza Futro, Andréia Apolinario da Silva, Arthur de Barros, Disney Andrade da Silva, Eliane Ferreira De Matos Goma, Franklin Costa Ferreira, *Gabriel Dantas De Souza*, *Gabriel Mazzi Ferreira Franco*, *Guilherme Domingues Alves*, *Heitor Teixeira Ramalho de Souza*, Helenilson Figueredo Rocha, Hernani Luiz de Mattos Silva, *Ivan Davidsom Bardini Vaz*, Jaiane Fernandes de Oliveira, José Rodrigo da Costa Takashima, Joveni Fatima Piltz Bogner, Lucas Teixeira dos Santos, Luiz Fernando de Oliveira, Maria Thayna Pereira Rocha, Nelson Manuel de Azevedo, Rafael Feitoza Torres, *Ramon Chiara*, Regis Fernando Marques Maia, *Ronaldo Moura De Jesus*, *Ronny Moraes Amarante*, Stephan Renato Alves da Silva, *Thais Nunes de Souza*, Vinicius Azevedo de Lima, Wesley Gonzaga de Melo
+* **Código**: [GitHub](https://github.com/ramonchiara/dojos-senac-tsi-ap-2013-2)
+
+Esse foi o primeiro Dojo da turma.
+O professor fez uma [apresentação sobre o que é um Coding Dojo](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Coding%20Dojo.png) e levantou os seguintes pontos:
+* A turma é grande (aproximadamente 30 pessoas), o que faria com que o tempo fosse muito curto para todos participarem; isso foi minimizado usando-se o tempo de 5 minutos para cada par programar.
+* Seria a primeira vez que ele faria um Dojo usando o Paradigma Procedimental (normalmente usa-se o Paradigma Orientado a Objetos) e que isso seria um aprendizado para ele, também; essa observação rendeu uma breve explicação sobre as diferenças entre os Paradigmas Estruturado e Procedimental.
+
+O problema foi escolhido de forma a se praticar os conceitos de matrizes e funções.
+Antes de começar a sessão de codificação, foi feita uma análise do problema e chegou-se à conclusão de que deveria haver, pelo menos, as seguintes funções: uma para contagem de aeroportos em um mapa e outra para a expansão das nuvens em um mapa.
+Essa análise guiou os testes.
+
+<pre>
+<code>public static int ContarAeroportos(char[,] Mapa)</code>: dada uma matriz de caracteres, deve retornar um número inteiro indicando a quantidade de aeroportos (caractere 'A') encontrados.
+
+<code>public static char[,] Expandir(char[,] Mapa)</code>: dada uma matriz de caracteres, deve retornar outra matriz de caracteres de mesmo tamanho, mas com as nuvens (caractere '*') expandidas.
+</pre>
+
+Os primeiros testes foram feitos pelo professor, pois, nos [Dojos da outra turma](https://github.com/ramonchiara/dojos-senac-tsi-oo-2013-2), foi constatado que isso deu certo.
+Mas, a título de experimentação, alguns testes também foram feitos por alunos.
+A experiência deu certo e será repetida nos próximos.
+
+Após quase uma hora de codificação, o tempo se esgotou e uma retrospectiva foi feita.
+
+Veja algumas fotos:
+
+![Turma concentrada no Dojo.](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.25.49.jpg)
+![Pair Programming!](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.26.00.jpg)
+![Pessoal fazendo a retrospectiva.](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.30.18.jpg)
+![Pessoal fazendo a retrospectiva.](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.30.30.jpg)
+![Pessoal fazendo a retrospectiva.](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.32.15.jpg)
+![Resultado da retrospectiva.](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.33.09.jpg)
+![Resultado da retrospectiva: o que pode ser melhorado?](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.40.05.jpg)
+![Resultado da retrospectiva: o que deu certo?](https://raw.github.com/ramonchiara/dojos-senac-tsi-ap-2013-2/master/Dojo1/Fotos/2013-11-07 22.40.26.jpg)
+
+**Retrospectiva:**
+
+* _O que deu certo? / O que aprendemos?_
+ * Trabalho em equipe e interatividade, todos juntos para resolver um problema x16 (!!!).
+ * Maneira divertida de aprender x5. _Em um dos post-its: "A solução Ronny F*d*"._
+ * Estimula o desenvolvimento pessoal e do conhecimento x4.
+
+* _O que pode melhorar? / O que dificultou o aprendizado?_
+ * Mais tempo para todos participarem x8. _Sugestão dada: fazer equipes diferentes; o professor comentou sobre um [outro formato de Dojo](http://www.agileandart.com/2010/08/16/dojo-kake/) em que isso pode ser feito._
+ * Comentar o código x2.
+ * Fazer mais Dojos / Usar o Git. _Com certeza para ambas as "requisições"! ;-)_
+ * Nível heterogêneo da turma.
+ * Maior participação da sala x5.
